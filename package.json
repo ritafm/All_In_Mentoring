@@ -1,0 +1,24 @@
+{
+  "name": "All_In_Mentoring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlfaroDeveloper/All_In_Mentoring.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlfaroDeveloper/All_In_Mentoring/issues"
+  },
+  "homepage": "https://github.com/AlfaroDeveloper/All_In_Mentoring#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
