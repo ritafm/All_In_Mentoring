@@ -1,5 +1,5 @@
 {
-  "name": "All_In_Mentoring",
+  "name": "all-in-mentoring",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -12,21 +12,21 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.0.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlfaroDeveloper/All_In_Mentoring.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/AlfaroDeveloper/All_In_Mentoring/issues"
   },
-  "homepage": "https://github.com/AlfaroDeveloper/All_In_Mentoring#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "concurrently": "^5.0.0"
-  }
+  "homepage": "https://github.com/AlfaroDeveloper/All_In_Mentoring#readme"
 }
