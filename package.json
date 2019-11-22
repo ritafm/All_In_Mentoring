@@ -24,5 +24,22 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
     "semantic-ui-react": "^0.88.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlfaroDeveloper/All_In_Mentoring.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlfaroDeveloper/All_In_Mentoring/issues"
+  },
+  "homepage": "https://github.com/AlfaroDeveloper/All_In_Mentoring#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0"
   }
 }
