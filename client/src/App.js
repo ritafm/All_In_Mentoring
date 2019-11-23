@@ -228,8 +228,8 @@ const HomepageLayout = () => (
               bioengineered.
             </p>
           </Grid.Column>
-          <Grid.Column floated='right' width={8} height={8}>
-            <Image bordered rounded size='large' src={images.girls} />
+          <Grid.Column floated='right' width={6}>
+            <Image bordered rounded size='large' src={images[0].src} />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
