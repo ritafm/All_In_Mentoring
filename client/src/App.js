@@ -16,6 +16,7 @@ import {
   Visibility,
 } from 'semantic-ui-react'
 import images from './images.json';
+import CardProps from "../src/components/MentorPictureCard/mentorCard"
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -257,6 +258,7 @@ const HomepageLayout = () => (
               <b>Nan</b> Chief Fun Officer Acme Toys
             </p>
           </Grid.Column>
+          <CardProps/>
         </Grid.Row>
       </Grid>
     </Segment>

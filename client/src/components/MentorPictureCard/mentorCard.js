@@ -8,7 +8,7 @@ const extra = (
   </a>
 )
 
-const CardExampleCardProps = () => (
+const CardProps = () => (
   <Card
     image='/images/avatar/large/elliot.jpg'
     header='Elliot Baker'
@@ -18,4 +18,4 @@ const CardExampleCardProps = () => (
   />
 )
 
-export default CardExampleCardProps
+export default CardProps
