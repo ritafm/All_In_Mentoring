@@ -1,3 +1,5 @@
+const express = require('express');
+const PORT = process.env.PORT || 3001;
 const express = require("express");
 // const mongoose = require("mongoose");
 // const routes = require("./routes");
@@ -16,7 +18,11 @@ if (process.env.NODE_ENV === "production") {
 // if we are working in a production enviorment this connects to our mongo db with moongoose and if it doesn't exist it will create it.
 
 
-// Start the API server
-app.listen(PORT, () =>
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`)
-);
+// Home Page
+// router.get('/', function (request, response) { 
+
+//  });
+
+app.listen(PORT, () => {
+  console.log(`listening on port ${PORT}!`);
+});
