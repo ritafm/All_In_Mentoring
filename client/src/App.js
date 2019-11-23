@@ -15,6 +15,7 @@ import {
   Sidebar,
   Visibility,
 } from 'semantic-ui-react'
+import images from './images.json';
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -227,8 +228,8 @@ const HomepageLayout = () => (
               bioengineered.
             </p>
           </Grid.Column>
-          <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+          <Grid.Column floated='right' width={8} height={8}>
+            <Image bordered rounded size='large' src={images.girls} />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -252,7 +253,7 @@ const HomepageLayout = () => (
               "I shouldn't have gone with their competitor."
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              <Image avatar src='/images/avatar/large/nan.jpg' />
+              <Image avatar src={images.loveWillHelp} />
               <b>Nan</b> Chief Fun Officer Acme Toys
             </p>
           </Grid.Column>
@@ -278,7 +279,7 @@ const HomepageLayout = () => (
           horizontal
           style={{ margin: '3em 0em', textTransform: 'uppercase' }}
         >
-          <a href='#'>Case Studies</a>
+          {/* <a href='#'>Case Studies</a> */}
         </Divider>
         <Header as='h3' style={{ fontSize: '2em' }}>
           Did We Tell You About Our Bananas?
