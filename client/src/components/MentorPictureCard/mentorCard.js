@@ -10,7 +10,7 @@ const extra = (
 
 const CardProps = () => (
   <Card
-    image='/images/avatar/large/elliot.jpg'
+    image='/images/avatar/large/daniel.jpg'
     header='Elliot Baker'
     meta='Friend'
     description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
