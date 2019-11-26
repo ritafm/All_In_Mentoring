@@ -18,6 +18,7 @@ import {
 import images from './images.json'
 import CardProps from "../src/components/MentorPictureCard/mentorCard"
 import ResourceProps from "../src/components/ParentResources/resources"
+import { Link } from 'react-router-dom'
 import Calender from './components/calendar/writeCalenderEvent'
 
 // Heads up!
@@ -237,16 +238,15 @@ const HomepageLayout = () => (
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign='center'>
-            <Button size='huge' id = "calendarID">View Calendar Here</Button>
-            <Button size='huge'>View Calendar Here</Button>
+            <Button as={ Link } to="/signin" size='huge' id = 'calendarID'>View Calendar Here</Button>
            <Calender/>
           </Grid.Column>
         </Grid.Row>
       </Grid>
     </Segment>
 
-    <Segment id = 'mentor' style={{ padding: '0em' }} vertical>
-      <Grid marginLeft="5%" columns='equal' stackable>
+    <Segment style={{ padding: '0em' }} vertical>
+      <Grid columns='equal' stackable>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
           <CardProps/>
