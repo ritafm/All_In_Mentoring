@@ -19,7 +19,7 @@ import images from './images.json'
 import CardProps from "../src/components/MentorPictureCard/mentorCard"
 import ResourceProps from "../src/components/ParentResources/resources"
 import { Link } from 'react-router-dom'
-
+import Calender from './components/calendar/writeCalenderEvent'
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -99,11 +99,11 @@ class DesktopContainer extends Component {
               size='large'
             >
               <Container>
-                <Menu.Item as='a' active>
+                <Menu.Item href = '/' as='a' active>
                   Home
                 </Menu.Item>
-                <Menu.Item as='a'>Calendar</Menu.Item>
-                <Menu.Item as='a'>Mentor Bios</Menu.Item>
+                <Menu.Item href = '#calendarID' as='a'>Calendar </Menu.Item>
+                <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
                 <Menu.Item as='a'>Parent Resources</Menu.Item>
                 <Menu.Item position='right'>
                   <Button as='a' inverted={!fixed}>
@@ -158,7 +158,7 @@ class MobileContainer extends Component {
             Home
           </Menu.Item>
           <Menu.Item as='a'>Calendar</Menu.Item>
-          <Menu.Item as='a'>Mentor Bios</Menu.Item>
+          <Menu.Item as='a' >Mentor Bios</Menu.Item>
           <Menu.Item as='a'>Parent Resources</Menu.Item>
           <Menu.Item as='a'>Log in</Menu.Item>
           <Menu.Item as='a'>Sign Up</Menu.Item>
@@ -238,7 +238,8 @@ const HomepageLayout = () => (
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign='center'>
-            <Button as={ Link } to="/signin" size='huge'>View Calendar Here</Button>
+            <Button as={ Link } to="/signin" size='huge' id = 'calendarID'>View Calendar Here</Button>
+           <Calender/>
           </Grid.Column>
         </Grid.Row>
       </Grid>
