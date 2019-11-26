@@ -243,7 +243,7 @@ const HomepageLayout = () => (
     </Segment>
 
     <Segment style={{ padding: '0em' }} vertical>
-      <Grid celled='internally' columns='equal' stackable>
+      <Grid marginLeft="5%" columns='equal' stackable>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
           <CardProps/>
