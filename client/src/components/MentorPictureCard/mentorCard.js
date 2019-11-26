@@ -1,8 +1,7 @@
 import React from 'react'
 import { Card, Icon } from 'semantic-ui-react'
 import images from '../../images.json'
-// import image from '../MentorPictureCard/MentorCard.json'
-import name from '../MentorPictureCard/MentorCard.json'
+
 
 
 const extra = (

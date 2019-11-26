@@ -1,5 +1,7 @@
 import React from 'react';
+// import Calender from '../calendar';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 
 const SignIn = () => {
@@ -16,7 +18,7 @@ const SignIn = () => {
         <Form.Field>
           <Checkbox label='I agree to the Terms and Conditions' />
         </Form.Field>
-        <Button type='submit'>Submit</Button>
+        <Button as={ Link } to="/calendar" type='submit'>Submit</Button>
       </Form>
     )
 }

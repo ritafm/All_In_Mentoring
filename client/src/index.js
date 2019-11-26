@@ -6,7 +6,6 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import SignIn from './components/SignIn';
-// import Calendar from './components/calendar'
 
 
 const Routing =() => {
