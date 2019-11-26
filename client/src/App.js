@@ -15,7 +15,7 @@ import {
   Sidebar,
   Visibility,
 } from 'semantic-ui-react'
-import images from './images.json';
+import images from './images.json'
 import CardProps from "../src/components/MentorPictureCard/mentorCard"
 import ResourceProps from "../src/components/ParentResources/resources"
 
@@ -236,7 +236,7 @@ const HomepageLayout = () => (
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign='center'>
-            <Button size='huge'>Check Them Out</Button>
+            <Button size='huge'>View Calendar Here</Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>
