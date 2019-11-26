@@ -18,6 +18,7 @@ import {
 import images from './images.json'
 import CardProps from "../src/components/MentorPictureCard/mentorCard"
 import ResourceProps from "../src/components/ParentResources/resources"
+import Calender from './components/calendar/writeCalenderEvent'
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -237,6 +238,8 @@ const HomepageLayout = () => (
         <Grid.Row>
           <Grid.Column textAlign='center'>
             <Button size='huge' id = "calendarID">View Calendar Here</Button>
+            <Button size='huge'>View Calendar Here</Button>
+           <Calender/>
           </Grid.Column>
         </Grid.Row>
       </Grid>
