@@ -98,11 +98,11 @@ class DesktopContainer extends Component {
               size='large'
             >
               <Container>
-                <Menu.Item as='a' active>
+                <Menu.Item href = '/' as='a' active>
                   Home
                 </Menu.Item>
-                <Menu.Item as='a'>Calendar</Menu.Item>
-                <Menu.Item as='a'>Mentor Bios</Menu.Item>
+                <Menu.Item href = '#calendarID' as='a'>Calendar </Menu.Item>
+                <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
                 <Menu.Item as='a'>Parent Resources</Menu.Item>
                 <Menu.Item position='right'>
                   <Button as='a' inverted={!fixed}>
@@ -157,7 +157,7 @@ class MobileContainer extends Component {
             Home
           </Menu.Item>
           <Menu.Item as='a'>Calendar</Menu.Item>
-          <Menu.Item as='a'>Mentor Bios</Menu.Item>
+          <Menu.Item as='a' >Mentor Bios</Menu.Item>
           <Menu.Item as='a'>Parent Resources</Menu.Item>
           <Menu.Item as='a'>Log in</Menu.Item>
           <Menu.Item as='a'>Sign Up</Menu.Item>
@@ -237,6 +237,7 @@ const HomepageLayout = () => (
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign='center'>
+            <Button size='huge' id = "calendarID">View Calendar Here</Button>
             <Button size='huge'>View Calendar Here</Button>
            <Calender/>
           </Grid.Column>
@@ -244,7 +245,7 @@ const HomepageLayout = () => (
       </Grid>
     </Segment>
 
-    <Segment style={{ padding: '0em' }} vertical>
+    <Segment id = 'mentor' style={{ padding: '0em' }} vertical>
       <Grid marginLeft="5%" columns='equal' stackable>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
