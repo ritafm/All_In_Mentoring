@@ -6,7 +6,7 @@ import name from '../MentorPictureCard/MentorCard.json'
 
 
 const extra = (
-  <a>
+  <a href='mailto: mentoremail@gmail.com' >
     <Icon name='user' />
     Email me
   </a>
