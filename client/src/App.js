@@ -197,7 +197,7 @@ const HomepageLayout = () => (
               Mentors
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              Our vision is to see youth become leaders who bring change to neighborhoods.   
+              These are the mentors that are committed to see youth become leaders who bring change to neighborhoods.    
             </p>
           </Grid.Column>
         </Grid.Row>
@@ -213,11 +213,11 @@ const HomepageLayout = () => (
       <Grid marginLeft="5%" columns='equal' stackable>
       <Grid.Row>
           <Grid.Column width={8}>
-          <Header as='h3' style={{ fontSize: '2em' }}>
+            <Header as='h3' style={{ fontSize: '2em' }}>
               Parent Resources
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              Please access the following documents as needed.   
+              Important documents for participation in the program.
             </p>
           </Grid.Column>
         </Grid.Row>
