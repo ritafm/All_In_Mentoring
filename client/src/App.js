@@ -190,8 +190,7 @@ const HomepageLayout = () => (
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign='center'>
-            <Button as={ Link } to="/signin" size='huge' id = 'calendarID'>View Calendar Here</Button>
-           <Calender/>
+
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -205,7 +204,7 @@ const HomepageLayout = () => (
               Mentors
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              Our vision is to see youth become leaders who bring change to neighborhoods.   
+              These are the mentors that are committed to see youth become leaders who bring change to neighborhoods.    
             </p>
           </Grid.Column>
         </Grid.Row>
@@ -217,16 +216,25 @@ const HomepageLayout = () => (
       </Grid>
     </Segment>
 
-    <Segment style={{ padding: '0em' }} vertical>
-      <Grid celled='internally' columns='equal' stackable>
+    <Segment style={{ padding: '12em' }} vertical>
+      <Grid marginLeft="5%" columns='equal' stackable>
+      <Grid.Row>
+          <Grid.Column width={8}>
+            <Header as='h3' style={{ fontSize: '2em' }}>
+              Parent Resources
+            </Header>
+            <p style={{ fontSize: '1.33em' }}>
+              Important documents for participation in the program.
+            </p>
+          </Grid.Column>
+        </Grid.Row>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
           <ResourceProps/>
           </Grid.Column>
-        </Grid.Row>
+          </Grid.Row>
       </Grid>
     </Segment>
-
 
     <Segment inverted vertical style={{ padding: '5em 0em' }}>
       <Container>
