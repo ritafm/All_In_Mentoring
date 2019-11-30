@@ -3,11 +3,8 @@ import React, { Component } from 'react'
 import {
   Button,
   Container,
-  // Divider,
   Grid,
   Header,
-  Icon,
-  Image,
   List,
   Menu,
   Responsive,
@@ -16,10 +13,8 @@ import {
   Visibility,
 } from 'semantic-ui-react'
 import images from './images.json'
-import CardProps from "../src/components/MentorPictureCard/mentorCard"
-import ResourceProps from "../src/components/ParentResources/resources"
-import { Link } from 'react-router-dom'
-import Calender from './components/calendar/writeCalenderEvent'
+import CardProps from '../src/components/MentorPictureCard/mentorCard'
+import ResourceProps from '../src/components/ParentResources/resources'
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -88,7 +83,10 @@ class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 700, padding: '1em 0em' }}
+            style={{ 
+              minHeight: 500, 
+              padding: '1em 0em',
+            }}
             vertical
           >
             <Menu
@@ -105,14 +103,6 @@ class DesktopContainer extends Component {
                 <Menu.Item href = '#calendarID' as='a'>Calendar </Menu.Item>
                 <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
                 <Menu.Item as='a'>Parent Resources</Menu.Item>
-                <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
-                    Log in
-                  </Button>
-                  <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                    Sign Up
-                  </Button>
-                </Menu.Item>
               </Container>
             </Menu>
             <HomepageHeading />
@@ -154,41 +144,13 @@ class MobileContainer extends Component {
           vertical
           visible={sidebarOpened}
         >
-          <Menu.Item as='a' active>
-            Home
-          </Menu.Item>
+          <Menu.Item as='a' active>Home</Menu.Item>
           <Menu.Item as='a'>Calendar</Menu.Item>
           <Menu.Item as='a' >Mentor Bios</Menu.Item>
           <Menu.Item as='a'>Parent Resources</Menu.Item>
-          <Menu.Item as='a'>Log in</Menu.Item>
-          <Menu.Item as='a'>Sign Up</Menu.Item>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
-          <Segment
-            inverted
-            textAlign='center'
-            style={{ minHeight: 350, padding: '1em 0em' }}
-            vertical
-          >
-            <Container>
-              <Menu inverted pointing secondary size='large'>
-                <Menu.Item onClick={this.handleToggle}>
-                  <Icon name='sidebar' />
-                </Menu.Item>
-                <Menu.Item position='right'>
-                  <Button as='a' inverted>
-                    Log in
-                  </Button>
-                  <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
-                    Sign Up
-                  </Button>
-                </Menu.Item>
-              </Menu>
-            </Container>
-            <HomepageHeading mobile />
-          </Segment>
-
           {children}
         </Sidebar.Pusher>
       </Responsive>
@@ -218,22 +180,12 @@ const HomepageLayout = () => (
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              We Help Companies and Companions
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              We can give your company superpowers to do things that they never thought possible.
-              Let us delight your customers and empower your needs... through pure data analytics.
-            </p>
-            <Header as='h3' style={{ fontSize: '2em' }}>
               We Make Bananas That Can Dance
             </Header>
             <p style={{ fontSize: '1.33em' }}>
               Yes that's right, you thought it was the stuff of dreams, but even bananas can be
               bioengineered.
             </p>
-          </Grid.Column>
-          <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src={images[0].src} />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -245,25 +197,23 @@ const HomepageLayout = () => (
       </Grid>
     </Segment>
 
-    <Segment style={{ padding: '0em' }} vertical>
-      <Grid columns='equal' stackable>
+    <Segment style={{ padding: '12em' }} vertical>
+      <Grid marginLeft="5%" columns='equal' stackable>
+      <Grid.Row>
+          <Grid.Column width={8}>
+            <Header as='h3' style={{ fontSize: '2em' }}>
+              Mentors
+            </Header>
+            <p style={{ fontSize: '1.33em' }}>
+              Our vision is to see youth become leaders who bring change to neighborhoods.   
+            </p>
+          </Grid.Column>
+        </Grid.Row>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
           <CardProps/>
           </Grid.Column>
-          <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-          <CardProps/>
-          </Grid.Column>
-          <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-          <CardProps/>
-          </Grid.Column>
-          <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-          <CardProps/>
-          </Grid.Column>
-          <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-          <CardProps/>
-          </Grid.Column>
-        </Grid.Row>
+          </Grid.Row>
       </Grid>
     </Segment>
 
@@ -302,11 +252,10 @@ const HomepageLayout = () => (
             </Grid.Column>
             <Grid.Column width={7}>
               <Header as='h4' inverted>
-                Footer Header
+                Our Mission:
               </Header>
               <p>
-                Extra space for a call to action inside the footer that could help re-engage users.
-              </p>
+              To create a safe place for youth to have fun, be creative, mentored and empowered.               </p>
             </Grid.Column>
           </Grid.Row>
         </Grid>
