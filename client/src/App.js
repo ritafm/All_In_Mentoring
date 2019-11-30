@@ -97,11 +97,11 @@ class DesktopContainer extends Component {
               size='large'
             >
               <Container>
-                <Menu.Item as='a' active>
+                <Menu.Item href = '/' as='a' active>
                   Home
                 </Menu.Item>
-                <Menu.Item as='a'>Calendar</Menu.Item>
-                <Menu.Item as='a'>Mentor Bios</Menu.Item>
+                <Menu.Item href = '#calendarID' as='a'>Calendar </Menu.Item>
+                <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
                 <Menu.Item as='a'>Parent Resources</Menu.Item>
               </Container>
             </Menu>
@@ -146,7 +146,7 @@ class MobileContainer extends Component {
         >
           <Menu.Item as='a' active>Home</Menu.Item>
           <Menu.Item as='a'>Calendar</Menu.Item>
-          <Menu.Item as='a'>Mentor Bios</Menu.Item>
+          <Menu.Item as='a' >Mentor Bios</Menu.Item>
           <Menu.Item as='a'>Parent Resources</Menu.Item>
         </Sidebar>
 
@@ -190,7 +190,8 @@ const HomepageLayout = () => (
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign='center'>
-            <Button size='huge'>View Calendar Here</Button>
+            <Button as={ Link } to="/signin" size='huge' id = 'calendarID'>View Calendar Here</Button>
+           <Calender/>
           </Grid.Column>
         </Grid.Row>
       </Grid>
