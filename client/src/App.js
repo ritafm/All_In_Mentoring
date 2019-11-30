@@ -12,7 +12,6 @@ import {
   Sidebar,
   Visibility,
 } from 'semantic-ui-react'
-import images from './images.json'
 import CardProps from '../src/components/MentorPictureCard/mentorCard'
 import ResourceProps from '../src/components/ParentResources/resources'
 
@@ -180,18 +179,11 @@ const HomepageLayout = () => (
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              We Make Bananas That Can Dance
+              All iIn Calendar
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-              bioengineered.
+              Volunteers please log in and click on events to claim.
             </p>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column textAlign='center'>
-            <Button as={ Link } to="/signin" size='huge' id = 'calendarID'>View Calendar Here</Button>
-           <Calender/>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -217,16 +209,25 @@ const HomepageLayout = () => (
       </Grid>
     </Segment>
 
-    <Segment style={{ padding: '0em' }} vertical>
-      <Grid celled='internally' columns='equal' stackable>
+    <Segment style={{ padding: '12em' }} vertical>
+      <Grid marginLeft="5%" columns='equal' stackable>
+      <Grid.Row>
+          <Grid.Column width={8}>
+          <Header as='h3' style={{ fontSize: '2em' }}>
+              Parent Resources
+            </Header>
+            <p style={{ fontSize: '1.33em' }}>
+              Please access the following documents as needed.   
+            </p>
+          </Grid.Column>
+        </Grid.Row>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
           <ResourceProps/>
           </Grid.Column>
-        </Grid.Row>
+          </Grid.Row>
       </Grid>
     </Segment>
-
 
     <Segment inverted vertical style={{ padding: '5em 0em' }}>
       <Container>
