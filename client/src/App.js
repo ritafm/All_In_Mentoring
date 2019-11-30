@@ -12,7 +12,6 @@ import {
   Sidebar,
   Visibility,
 } from 'semantic-ui-react'
-import images from './images.json'
 import CardProps from '../src/components/MentorPictureCard/mentorCard'
 import ResourceProps from '../src/components/ParentResources/resources'
 
@@ -180,17 +179,11 @@ const HomepageLayout = () => (
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              We Make Bananas That Can Dance
+              All iIn Calendar
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-              bioengineered.
+              Volunteers please log in and click on events to claim.
             </p>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column textAlign='center'>
-
           </Grid.Column>
         </Grid.Row>
       </Grid>
