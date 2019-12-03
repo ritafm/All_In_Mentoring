@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import {
-  Button,
   Container,
   Grid,
   Header,
@@ -14,6 +13,7 @@ import {
 } from 'semantic-ui-react'
 import CardProps from '../src/components/MentorPictureCard/mentorCard'
 import ResourceProps from '../src/components/ParentResources/resources'
+
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -79,15 +79,17 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
-          <Segment
+          <Segment 
+            image='../public/assets/images/lovewillhelp'
             inverted
             textAlign='center'
             style={{ 
-              minHeight: 500, 
+              minHeight: 300, 
               padding: '1em 0em',
             }}
             vertical
           >
+
             <Menu
               fixed={fixed ? 'top' : null}
               inverted={!fixed}
@@ -190,7 +192,7 @@ const HomepageLayout = () => (
     </Segment>
 
     <Segment style={{ padding: '12em' }} vertical>
-      <Grid marginLeft="5%" columns='equal' stackable>
+      <Grid marginleft="5%" columns='equal' stackable>
       <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
@@ -210,7 +212,7 @@ const HomepageLayout = () => (
     </Segment>
 
     <Segment style={{ padding: '12em' }} vertical>
-      <Grid marginLeft="5%" columns='equal' stackable>
+      <Grid marginleft="5%" columns='equal' stackable>
       <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
