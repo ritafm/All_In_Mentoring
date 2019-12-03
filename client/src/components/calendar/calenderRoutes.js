@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const axios = require('axios')
+const axios = require('axios');
 
     // go to the route that we will get the info from the axios calender link below using axios
     router.get('/calender', function (request, response) { 
         // axios will go to the site and return an event as in the calender
-        axios.get('https://www.supersaas.com/super_schedule/configure_overview/453017')
+        axios.get('https://www.supersaas.com/schedule/All_In_Mentoring/All_In_Mentoring')
         .then(function (response) { console.log('retrieved calender information ') })
         .catch(function (error) { console.log(error) });
         // Somewhere in this route we will get database info?
