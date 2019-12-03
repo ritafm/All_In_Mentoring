@@ -4,7 +4,10 @@
         "image": "/assets/images/aalijah.jpg",
         "meta":"",
         "description":"",
-        "extra":"<a href='mailto: alliinaalijah@gmail.com' >"
+        "extra":"<a href='mailto: mentoremail@gmail.com' >
+        <Icon name='user' />
+        Email me
+      </a>"
     },
     {
         "header": "Kinza Shafir",
