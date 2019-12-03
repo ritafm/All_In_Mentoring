@@ -2,35 +2,31 @@
     {
         "header": "Aalijah Fulton",
         "image": "/assets/images/aalijah.jpg",
-        "meta":"",
         "description":"",
-        "extra":"<a href='mailto: mentoremail@gmail.com' >
-        <Icon name='user' />
-        Email me
-      </a>"
+        "email":"alliinaalijah@gmail.com"
     },
     {
         "header": "Kinza Shafir",
         "image": "/assets/images/Kinza.jpg",
-        "meta":"",
-        "description":""
+        "description":"",
+        "email":"alliinkinza@gmail.com"
     },
     {
         "header": "Terrijanae Rachal",
         "image": "/assets/images/terrijanae.jpg",
-        "meta":"",
-        "description":""
+        "description":"",
+        "email":"alliinterrijanae@gmail.com"
     },
     {
         "header": "Jessa Mae Tabasondra",
         "image": "/assets/images/jessamae.jpg",
-        "meta":"",
-        "description":""
+        "description":"",
+        "email":"alliinjessamae@gmail.com"
     },
     {
         "header": "Lovell Davis",
         "image": "/assets/images/lovell.jpg",
-        "meta":"",
-        "description":""
+        "description":"Born in Los Angeles and raised in Seattle Washington, Lovell comes from a family of four, two sisters and one brother; raised by his mom in a single parent home. His passion for urban youth started to develop at a young age, through experiencing the destructiveness of fatherlessness and oppression in his neighborhood. Lovell brings over 10 years of experience working with youth, through basketball coaching, recording music, and leading faith-based youth groups. In 2016, after completing the Washington Initiative for Leaders, he discovered his passion was rooted in mentoring and began the process of forming ALL iIN.",
+        "email":"alliinlovell@gmail.com"
     }
 ]
