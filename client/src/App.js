@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import {
-  Button,
   Container,
   Grid,
   Header,
@@ -39,6 +38,7 @@ const HomepageHeading = ({ mobile }) => (
         fontWeight: 'normal',
         marginBottom: 0,
         marginTop: mobile ? '1.5em' : '3em',
+        backgroundImage: ''
       }}
     />
     <Header
@@ -80,6 +80,7 @@ class DesktopContainer extends Component {
           onBottomPassedReverse={this.hideFixedMenu}
         >
           <Segment
+            masthead
             inverted
             textAlign='center'
             style={{ 
