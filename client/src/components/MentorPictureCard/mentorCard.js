@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card, Icon } from 'semantic-ui-react'
-// import images from '../../images.json'
 import MentorCard from '../MentorPictureCard/MentorCard.json'
 
 
