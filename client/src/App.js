@@ -111,6 +111,7 @@ class DesktopContainer extends Component {
                   <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
                     Sign Up
                   </Button>
+                  <Button href='' inverted={fixed} primary={fixed} style={{ marginLeft: '0.5em', background: 'yellow'}}>Donate</Button>
                 </Menu.Item>
               </Container>
             </Menu>
