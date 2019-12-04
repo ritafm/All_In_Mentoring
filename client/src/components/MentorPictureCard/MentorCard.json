@@ -1,37 +1,32 @@
 [
     {
-        "name": "Aalijah Fulton",
-        "image": "/assets/images/loveWillHelp.jpg",
-        "header":"",
-        "meta":"",
-        "description":""
+        "header": "Aalijah Fulton",
+        "image": "/assets/images/aalijah.jpg",
+        "description":"",
+        "email":"alliinaalijah@gmail.com"
     },
     {
-        "name": "",
-        "image": "/assets/images/loveWillHelp.jpg",
-        "header":"",
-        "meta":"",
-        "description":""
+        "header": "Kinza Shafir",
+        "image": "/assets/images/Kinza.jpg",
+        "description":"",
+        "email":"alliinkinza@gmail.com"
     },
     {
-        "name": "",
-        "image": "/assets/images/loveWillHelp.jpg",
-        "header":"",
-        "meta":"",
-        "description":""
+        "header": "Terrijanae Rachal",
+        "image": "/assets/images/terrijanae.jpg",
+        "description":"",
+        "email":"alliinterrijanae@gmail.com"
     },
     {
-        "name": "",
-        "image": "/assets/images/loveWillHelp.jpg",
-        "header":"",
-        "meta":"",
-        "description":""
+        "header": "Jessa Mae Tabasondra",
+        "image": "/assets/images/jessamae.jpg",
+        "description":"",
+        "email":"alliinjessamae@gmail.com"
     },
     {
-        "name": "",
-        "image": "/assets/images/loveWillHelp.jpg",
-        "header":"",
-        "meta":"",
-        "description":""
+        "header": "Lovell Davis",
+        "image": "/assets/images/lovell.jpg",
+        "description":"Born in Los Angeles and raised in Seattle Washington, Lovell comes from a family of four, two sisters and one brother; raised by his mom in a single parent home. His passion for urban youth started to develop at a young age, through experiencing the destructiveness of fatherlessness and oppression in his neighborhood. Lovell brings over 10 years of experience working with youth, through basketball coaching, recording music, and leading faith-based youth groups. In 2016, after completing the Washington Initiative for Leaders, he discovered his passion was rooted in mentoring and began the process of forming ALL iIN.",
+        "email":"alliinlovell@gmail.com"
     }
 ]
