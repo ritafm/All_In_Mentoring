@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import {
+  Button,
   Container,
   Grid,
   Header,
-  List,
   Menu,
   Responsive,
   Segment,
@@ -13,11 +13,6 @@ import {
 } from 'semantic-ui-react'
 import CardProps from '../src/components/MentorPictureCard/mentorCard'
 import ResourceProps from '../src/components/ParentResources/resources'
-import images from './images.json'
-import CardProps from "../src/components/MentorPictureCard/mentorCard"
-import ResourceProps from "../src/components/ParentResources/resources"
-import Calender from './components/calendar/parentView'
-import { PayPalButton } from 'react-paypal-button'
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -84,7 +79,7 @@ class DesktopContainer extends Component {
           onBottomPassedReverse={this.hideFixedMenu}
         >
           <Segment 
-            inverted color='blue'
+            inverted 
             textAlign='center'
             style={{ 
               minHeight: 300, 
@@ -108,17 +103,14 @@ class DesktopContainer extends Component {
                 <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
                 <Menu.Item as='a'>Parent Resources</Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
-                    Log in
-                  </Button>
-                  <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                    Sign Up
-                  </Button>
-                  <Button href='' inverted={fixed} primary={fixed} style={{ marginLeft: '0.5em', background: 'yellow'}}>Donate</Button>
                 </Menu.Item>
-                <Menu.Item as='a'>{ PayPalButton }</Menu.Item>
-
               </Container>
+            <a class="facebook popup icon item" data-content="visit us on Facebook" href="https://www.facebook.com/alliin.mentoring.7" target="blank">
+              <i class="facebook icon"></i>
+            </a>
+            <a class="instagram popup icon item" data-content="visit us on Instagram" href="https://www.instagram.com/alliinmentoring/" target="blank">
+          <i class="instagram icon"></i>
+        </a>
             </Menu>
             <HomepageHeading />
           </Segment>
@@ -202,6 +194,11 @@ const HomepageLayout = () => (
             </p>
           </Grid.Column>
         </Grid.Row>
+        <Grid.Row>
+          <Grid.Column textAlign='center'>
+            <Button size='huge' href='https://www.supersaas.com/schedule/All_In_Mentoring/All_In_Mentoring'>View Calendar Here</Button>
+          </Grid.Column>
+        </Grid.Row>
       </Grid>
     </Segment>
 
@@ -217,16 +214,6 @@ const HomepageLayout = () => (
             </p>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row>
-          <Grid.Column textAlign='center'>
-            <Button size='huge' href='https://www.supersaas.com/schedule/All_In_Mentoring/All_In_Mentoring'>View Calendar Here</Button>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
-
-    <Segment style={{ padding: '0em' }} vertical>
-      <Grid marginLeft="5%" columns='equal' stackable>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
           <CardProps/>
@@ -254,33 +241,14 @@ const HomepageLayout = () => (
           </Grid.Row>
       </Grid>
     </Segment>
-
-    <Segment inverted color='blue' vertical style={{ padding: '5em 0em' }}>
-      <Container>
-        <Grid divided inverted stackable>
-          <Grid.Row>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='About' />
-              <List link inverted>
-                <List.Item as='a'>Contact Us</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={7}>
-              <Header as='h4' inverted>
-                Our Mission:
-              </Header>
-              <p>
-              To create a safe place for youth to have fun, be creative, mentored and empowered.               </p>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-        <div className="ui icon buttons">
-  <button className="ui button"><i className="bold icon"></i></button>
-  <button className="ui button"><i className="underline icon"></i></button>
-  <button className="ui button"><i className="text width icon"></i></button>
+    <div class="ui inverted segment">
+  <p></p>
+  <p></p>
+  <h4 class="ui horizontal inverted divider">
+  Our Mission: To create a safe place for youth to have fun, be creative, mentored and empowered.
+  </h4>
 </div>
-      </Container>
-    </Segment>
+<br></br>
   </ResponsiveContainer>
 )
 export default HomepageLayout
