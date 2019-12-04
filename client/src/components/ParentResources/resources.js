@@ -6,14 +6,14 @@ const ResourceProps = () => (
     <Item>
 
       <Item.Content>
-        <Item.Header as='a'>Code of Conduct</Item.Header>
+        <Item.Header as='a'><a href="/assets/pdf/codeOfConduct.pdf">Code of Conduct</a></Item.Header>
       </Item.Content>
     </Item>
 
     <Item>
 
       <Item.Content>
-        <Item.Header as='a'>Activity Waiver</Item.Header>
+        <Item.Header as='a'><a href="/assets/pdf/liability.pdf">Activity Waiver</a></Item.Header>
       </Item.Content>
     </Item>
   </Item.Group>
