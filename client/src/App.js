@@ -13,6 +13,9 @@ import {
 } from 'semantic-ui-react'
 import CardProps from '../src/components/MentorPictureCard/mentorCard'
 import ResourceProps from '../src/components/ParentResources/resources'
+import { PayPalButton } from 'react-paypal-button'
+
+
 
 
 // Heads up!
@@ -79,8 +82,7 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
-          <Segment 
-            image='../public/assets/images/lovewillhelp'
+          <Segment image='../public/assets/images/lovewillhelp'
             inverted
             textAlign='center'
             style={{ 
@@ -104,6 +106,8 @@ class DesktopContainer extends Component {
                 <Menu.Item href = '#calendarID' as='a'>Calendar </Menu.Item>
                 <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
                 <Menu.Item as='a'>Parent Resources</Menu.Item>
+                <Menu.Item as='a'>{ PayPalButton }</Menu.Item>
+
               </Container>
             </Menu>
             <HomepageHeading />
@@ -231,26 +235,14 @@ const HomepageLayout = () => (
       </Grid>
     </Segment>
 
-    <Segment inverted vertical style={{ padding: '5em 0em' }}>
+    <Segment inverted color='blue' vertical style={{ padding: '5em 0em' }}>
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
             <Grid.Column width={3}>
               <Header inverted as='h4' content='About' />
               <List link inverted>
-                <List.Item as='a'>Sitemap</List.Item>
                 <List.Item as='a'>Contact Us</List.Item>
-                <List.Item as='a'>Religious Ceremonies</List.Item>
-                <List.Item as='a'>Gazebo Plans</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='Services' />
-              <List link inverted>
-                <List.Item as='a'>Banana Pre-Order</List.Item>
-                <List.Item as='a'>DNA FAQ</List.Item>
-                <List.Item as='a'>How To Access</List.Item>
-                <List.Item as='a'>Favorite X-Men</List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={7}>
