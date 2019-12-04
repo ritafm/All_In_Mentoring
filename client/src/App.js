@@ -13,7 +13,6 @@ import {
 } from 'semantic-ui-react'
 import CardProps from '../src/components/MentorPictureCard/mentorCard'
 import ResourceProps from '../src/components/ParentResources/resources'
-import { PayPalButton } from 'react-paypal-button'
 
 
 
@@ -82,8 +81,8 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
-          <Segment image='../public/assets/images/lovewillhelp'
-            inverted
+          <Segment 
+            inverted color='blue'
             textAlign='center'
             style={{ 
               minHeight: 300, 
@@ -97,17 +96,15 @@ class DesktopContainer extends Component {
               inverted={!fixed}
               pointing={!fixed}
               secondary={!fixed}
-              size='large'
-            >
-              <Container>
+              size='massive'
+              >
+              <Container >
                 <Menu.Item href = '/' as='a' active>
                   Home
                 </Menu.Item>
                 <Menu.Item href = '#calendarID' as='a'>Calendar </Menu.Item>
                 <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
                 <Menu.Item as='a'>Parent Resources</Menu.Item>
-                <Menu.Item as='a'>{ PayPalButton }</Menu.Item>
-
               </Container>
             </Menu>
             <HomepageHeading />
@@ -254,6 +251,11 @@ const HomepageLayout = () => (
             </Grid.Column>
           </Grid.Row>
         </Grid>
+        <div className="ui icon buttons">
+  <button className="ui button"><i className="bold icon"></i></button>
+  <button className="ui button"><i className="underline icon"></i></button>
+  <button className="ui button"><i className="text width icon"></i></button>
+</div>
       </Container>
     </Segment>
   </ResponsiveContainer>
