@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import {
-  Button,
   Container,
   Grid,
   Header,
@@ -14,6 +13,10 @@ import {
 } from 'semantic-ui-react'
 import CardProps from '../src/components/MentorPictureCard/mentorCard'
 import ResourceProps from '../src/components/ParentResources/resources'
+import { PayPalButton } from 'react-paypal-button'
+
+
+
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -79,15 +82,16 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
-          <Segment
+          <Segment image='../public/assets/images/lovewillhelp'
             inverted
             textAlign='center'
             style={{ 
-              minHeight: 500, 
+              minHeight: 300, 
               padding: '1em 0em',
             }}
             vertical
           >
+
             <Menu
               fixed={fixed ? 'top' : null}
               inverted={!fixed}
@@ -102,6 +106,8 @@ class DesktopContainer extends Component {
                 <Menu.Item href = '#calendarID' as='a'>Calendar </Menu.Item>
                 <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
                 <Menu.Item as='a'>Parent Resources</Menu.Item>
+                <Menu.Item as='a'>{ PayPalButton }</Menu.Item>
+
               </Container>
             </Menu>
             <HomepageHeading />
@@ -190,7 +196,7 @@ const HomepageLayout = () => (
     </Segment>
 
     <Segment style={{ padding: '12em' }} vertical>
-      <Grid marginLeft="5%" columns='equal' stackable>
+      <Grid marginleft="5%" columns='equal' stackable>
       <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
@@ -210,7 +216,7 @@ const HomepageLayout = () => (
     </Segment>
 
     <Segment style={{ padding: '12em' }} vertical>
-      <Grid marginLeft="5%" columns='equal' stackable>
+      <Grid marginleft="5%" columns='equal' stackable>
       <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
@@ -229,26 +235,14 @@ const HomepageLayout = () => (
       </Grid>
     </Segment>
 
-    <Segment inverted vertical style={{ padding: '5em 0em' }}>
+    <Segment inverted color='blue' vertical style={{ padding: '5em 0em' }}>
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
             <Grid.Column width={3}>
               <Header inverted as='h4' content='About' />
               <List link inverted>
-                <List.Item as='a'>Sitemap</List.Item>
                 <List.Item as='a'>Contact Us</List.Item>
-                <List.Item as='a'>Religious Ceremonies</List.Item>
-                <List.Item as='a'>Gazebo Plans</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='Services' />
-              <List link inverted>
-                <List.Item as='a'>Banana Pre-Order</List.Item>
-                <List.Item as='a'>DNA FAQ</List.Item>
-                <List.Item as='a'>How To Access</List.Item>
-                <List.Item as='a'>Favorite X-Men</List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={7}>
