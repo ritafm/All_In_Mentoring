@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import {
+  Button,
   Container,
   Grid,
   Header,
-  List,
   Menu,
   Responsive,
   Segment,
@@ -13,10 +13,6 @@ import {
 } from 'semantic-ui-react'
 import CardProps from '../src/components/MentorPictureCard/mentorCard'
 import ResourceProps from '../src/components/ParentResources/resources'
-import { PayPalButton } from 'react-paypal-button'
-
-
-
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -35,7 +31,7 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as='h1'
-      content='All iIN Mentoring'
+      content='ALL iiN Mentoring'
       inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
@@ -82,8 +78,8 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
-          <Segment image='../public/assets/images/lovewillhelp'
-            inverted
+          <Segment 
+            inverted 
             textAlign='center'
             style={{ 
               minHeight: 300, 
@@ -97,18 +93,25 @@ class DesktopContainer extends Component {
               inverted={!fixed}
               pointing={!fixed}
               secondary={!fixed}
-              size='large'
-            >
-              <Container>
+              size='massive'
+              >
+              <Container >
                 <Menu.Item href = '/' as='a' active>
                   Home
                 </Menu.Item>
-                <Menu.Item href ='#calendarID' as='a'>Calendar </Menu.Item>
-                <Menu.Item href ='#mentor' as='a'>Mentor Bios</Menu.Item>
-                <Menu.Item href ='#parentResourcesID' as='a'>Parent Resources</Menu.Item>
-                <Menu.Item as='a'>{ PayPalButton }</Menu.Item>
+                <Menu.Item href = '#calendarID' as='a'>Calendar </Menu.Item>
+                <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
+                <Menu.Item as='a'>Parent Resources</Menu.Item>
+                <Menu.Item position='right'>
+                </Menu.Item>
 
               </Container>
+            <a class="facebook popup icon item" data-content="visit us on Facebook" href="https://www.facebook.com/alliin.mentoring.7" target="blank">
+              <i class="facebook icon"></i>
+            </a>
+            <a class="instagram popup icon item" data-content="visit us on Instagram" href="https://www.instagram.com/alliinmentoring/" target="blank">
+          <i class="instagram icon"></i>
+        </a>    
             </Menu>
             <HomepageHeading />
           </Segment>
@@ -185,11 +188,16 @@ const HomepageLayout = () => (
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              All iIn Calendar
+              All iiN Calendar
             </Header>
             <p style={{ fontSize: '1.33em' }}>
               Volunteers please log in and click on events to claim.
             </p>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column textAlign='center'>
+            <Button size='huge' href='https://www.supersaas.com/schedule/All_In_Mentoring/All_In_Mentoring'>View Calendar Here</Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -234,28 +242,14 @@ const HomepageLayout = () => (
           </Grid.Row>
       </Grid>
     </Segment>
-
-    <Segment inverted color='blue' vertical style={{ padding: '5em 0em' }}>
-      <Container>
-        <Grid divided inverted stackable>
-          <Grid.Row>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='About' />
-              <List link inverted>
-                <List.Item as='a'>Contact Us</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={7}>
-              <Header as='h4' inverted>
-                Our Mission:
-              </Header>
-              <p>
-              To create a safe place for youth to have fun, be creative, mentored and empowered.               </p>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
-    </Segment>
+    <div class="ui inverted segment">
+  <p></p>
+  <p></p>
+  <h4 class="ui horizontal inverted divider">
+  Our Mission: To create a safe place for youth to have fun, be creative, mentored and empowered.
+  </h4>
+</div>
+<br></br>
   </ResponsiveContainer>
 )
 export default HomepageLayout
