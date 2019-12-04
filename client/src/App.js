@@ -104,6 +104,7 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a'>Parent Resources</Menu.Item>
                 <Menu.Item position='right'>
                 </Menu.Item>
+
               </Container>
             <a class="facebook popup icon item" data-content="visit us on Facebook" href="https://www.facebook.com/alliin.mentoring.7" target="blank">
               <i class="facebook icon"></i>
@@ -152,9 +153,9 @@ class MobileContainer extends Component {
           visible={sidebarOpened}
         >
           <Menu.Item as='a' active>Home</Menu.Item>
-          <Menu.Item as='a'>Calendar</Menu.Item>
-          <Menu.Item as='a' >Mentor Bios</Menu.Item>
-          <Menu.Item as='a'>Parent Resources</Menu.Item>
+          <Menu.Item href ='#calendarID' as='a'>Calendar</Menu.Item>
+          <Menu.Item href ='#mentor' as='a' >Mentor Bios</Menu.Item>
+          <Menu.Item href ='#parentResourcesID' as='a'>Parent Resources</Menu.Item>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -182,7 +183,7 @@ ResponsiveContainer.propTypes = {
 
 const HomepageLayout = () => (
   <ResponsiveContainer>
-    <Segment style={{ padding: '8em 0em' }} vertical>
+    <Segment id="calendarID" style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column width={8}>
@@ -202,7 +203,7 @@ const HomepageLayout = () => (
       </Grid>
     </Segment>
 
-    <Segment style={{ padding: '12em' }} vertical>
+    <Segment id="mentor" style={{ padding: '12em' }} vertical>
       <Grid marginleft="5%" columns='equal' stackable>
       <Grid.Row>
           <Grid.Column width={8}>
@@ -222,11 +223,11 @@ const HomepageLayout = () => (
       </Grid>
     </Segment>
 
-    <Segment style={{ padding: '12em' }} vertical>
+    <Segment id="parentResourcesID" style={{ padding: '12em' }} vertical>
       <Grid marginleft="5%" columns='equal' stackable>
       <Grid.Row>
           <Grid.Column width={8}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
+            <Header  as='h3' style={{ fontSize: '2em' }}>
               Parent Resources
             </Header>
             <p style={{ fontSize: '1.33em' }}>
