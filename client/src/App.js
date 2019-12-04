@@ -11,18 +11,13 @@ import {
   Sidebar,
   Visibility,
 } from 'semantic-ui-react'
-<<<<<<< HEAD
 import CardProps from '../src/components/MentorPictureCard/mentorCard'
 import ResourceProps from '../src/components/ParentResources/resources'
-
-
-
-=======
 import images from './images.json'
 import CardProps from "../src/components/MentorPictureCard/mentorCard"
 import ResourceProps from "../src/components/ParentResources/resources"
 import Calender from './components/calendar/parentView'
->>>>>>> 996a3ac6715d80bdfedd7bc362e59603bbf6e145
+import { PayPalButton } from 'react-paypal-button'
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -121,6 +116,8 @@ class DesktopContainer extends Component {
                   </Button>
                   <Button href='' inverted={fixed} primary={fixed} style={{ marginLeft: '0.5em', background: 'yellow'}}>Donate</Button>
                 </Menu.Item>
+                <Menu.Item as='a'>{ PayPalButton }</Menu.Item>
+
               </Container>
             </Menu>
             <HomepageHeading />
