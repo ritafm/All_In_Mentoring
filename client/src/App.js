@@ -11,12 +11,11 @@ import {
   Sidebar,
   Visibility,
 } from 'semantic-ui-react'
-import CardProps from '../src/components/MentorPictureCard/mentorCard'
-import ResourceProps from '../src/components/ParentResources/resources'
+import images from './images.json'
+import CardProps from "../src/components/MentorPictureCard/mentorCard"
+import ResourceProps from "../src/components/ParentResources/resources"
+import Calender from './components/calendar/parentView'
 import { PayPalButton } from 'react-paypal-button'
-
-
-
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -106,6 +105,16 @@ class DesktopContainer extends Component {
                 <Menu.Item href = '#calendarID' as='a'>Calendar </Menu.Item>
                 <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
                 <Menu.Item as='a'>Parent Resources</Menu.Item>
+                <Menu.Item position='right'>
+                  <Button as='a' inverted={!fixed}>
+                    Log in
+                  </Button>
+                  <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
+                    Sign Up
+                  </Button>
+                  <Button href='' inverted={fixed} primary={fixed} style={{ marginLeft: '0.5em', background: 'yellow'}}>Donate</Button>
+                </Menu.Item>
+
                 <Menu.Item as='a'>{ PayPalButton }</Menu.Item>
 
               </Container>
@@ -207,6 +216,17 @@ const HomepageLayout = () => (
             </p>
           </Grid.Column>
         </Grid.Row>
+
+        <Grid.Row>
+          <Grid.Column textAlign='center'>
+            <Button size='huge' href='https://www.supersaas.com/schedule/All_In_Mentoring/All_In_Mentoring'>View Calendar Here</Button>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Segment>
+
+    <Segment style={{ padding: '0em' }} vertical>
+      <Grid marginLeft="5%" columns='equal' stackable>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
           <CardProps/>
