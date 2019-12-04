@@ -31,7 +31,7 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as='h1'
-      content='All iIN Mentoring'
+      content='ALL iiN Mentoring'
       inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
@@ -110,7 +110,7 @@ class DesktopContainer extends Component {
             </a>
             <a class="instagram popup icon item" data-content="visit us on Instagram" href="https://www.instagram.com/alliinmentoring/" target="blank">
           <i class="instagram icon"></i>
-        </a>
+        </a>    
             </Menu>
             <HomepageHeading />
           </Segment>
@@ -187,7 +187,7 @@ const HomepageLayout = () => (
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              All iIn Calendar
+              All iiN Calendar
             </Header>
             <p style={{ fontSize: '1.33em' }}>
               Volunteers please log in and click on events to claim.
