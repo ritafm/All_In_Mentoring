@@ -200,7 +200,7 @@ const HomepageLayout = () => (
       <Grid marginleft="5%" columns='equal' stackable>
         <Grid.Row>
           <Grid.Column width={16}>
-            <Header as='h3' style={{ textAlign: 'center',ontSize: '2em' }}>
+            <Header as='h3' style={{ textAlign: 'center',fontSize: '2em' }}>
               Mentors
             </Header>
             <p style={{ textAlign: 'center', fontSize: '1.33em' }}>
