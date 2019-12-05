@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import Image from "../src/bgImage"
 import {
   Container,
   Grid,
@@ -80,7 +81,7 @@ class DesktopContainer extends Component {
           onBottomPassedReverse={this.hideFixedMenu}
         >
           <Segment
-            masthead
+          {...Image}
             inverted
             textAlign='center'
             style={{ 
