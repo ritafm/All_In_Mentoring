@@ -5,7 +5,6 @@ import {
   Container,
   Grid,
   Header,
-  List,
   Menu,
   Responsive,
   Segment,
@@ -32,7 +31,7 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as='h1'
-      content='All iIN Mentoring'
+      content='ALL iiN Mentoring'
       inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
@@ -79,30 +78,40 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
-          <Segment
-            inverted
+          <Segment 
+            inverted 
             textAlign='center'
             style={{ 
-              minHeight: 500, 
+              minHeight: 300, 
               padding: '1em 0em',
             }}
             vertical
           >
+
             <Menu
               fixed={fixed ? 'top' : null}
               inverted={!fixed}
               pointing={!fixed}
               secondary={!fixed}
-              size='large'
-            >
-              <Container>
+              size='massive'
+              >
+              <Container >
                 <Menu.Item href = '/' as='a' active>
                   Home
                 </Menu.Item>
                 <Menu.Item href = '#calendarID' as='a'>Calendar </Menu.Item>
                 <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
-                <Menu.Item as='a'>Parent Resources</Menu.Item>
+                <Menu.Item href = '#parentResourcesID' as='a'>Parent Resources</Menu.Item>
+                <Menu.Item position='right'>
+                </Menu.Item>
+
               </Container>
+            <a class="facebook popup icon item" data-content="visit us on Facebook" href="https://www.facebook.com/alliin.mentoring.7" target="blank">
+              <i class="facebook icon"></i>
+            </a>
+            <a class="instagram popup icon item" data-content="visit us on Instagram" href="https://www.instagram.com/alliinmentoring/" target="blank">
+          <i class="instagram icon"></i>
+        </a>    
             </Menu>
             <HomepageHeading />
           </Segment>
@@ -144,9 +153,9 @@ class MobileContainer extends Component {
           visible={sidebarOpened}
         >
           <Menu.Item as='a' active>Home</Menu.Item>
-          <Menu.Item as='a'>Calendar</Menu.Item>
-          <Menu.Item as='a' >Mentor Bios</Menu.Item>
-          <Menu.Item as='a'>Parent Resources</Menu.Item>
+          <Menu.Item href ='#calendarID' as='a'>Calendar</Menu.Item>
+          <Menu.Item href ='#mentor' as='a'>Mentor Bios</Menu.Item>
+          <Menu.Item href ='#parentResourcesID' as='a'>Parent Resources</Menu.Item>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -174,23 +183,28 @@ ResponsiveContainer.propTypes = {
 
 const HomepageLayout = () => (
   <ResponsiveContainer>
-    <Segment style={{ padding: '8em 0em' }} vertical>
+    <Segment id="calendarID" style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              All iIn Calendar
+              All iiN Calendar
             </Header>
             <p style={{ fontSize: '1.33em' }}>
               Volunteers please log in and click on events to claim.
             </p>
           </Grid.Column>
         </Grid.Row>
+        <Grid.Row>
+          <Grid.Column textAlign='center'>
+            <Button size='huge' href='https://www.supersaas.com/schedule/All_In_Mentoring/All_In_Mentoring'>View Calendar Here</Button>
+          </Grid.Column>
+        </Grid.Row>
       </Grid>
     </Segment>
 
-    <Segment style={{ padding: '12em' }} vertical>
-      <Grid marginLeft="5%" columns='equal' stackable>
+    <Segment id="mentor" style={{ padding: '12em' }} vertical>
+      <Grid marginleft="5%" columns='equal' stackable>
       <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
@@ -209,11 +223,11 @@ const HomepageLayout = () => (
       </Grid>
     </Segment>
 
-    <Segment style={{ padding: '12em' }} vertical>
-      <Grid marginLeft="5%" columns='equal' stackable>
+    <Segment id="parentResourcesID" style={{ padding: '12em' }} vertical>
+      <Grid marginleft="5%" columns='equal' stackable>
       <Grid.Row>
           <Grid.Column width={8}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
+            <Header  as='h3' style={{ fontSize: '2em' }}>
               Parent Resources
             </Header>
             <p style={{ fontSize: '1.33em' }}>
@@ -228,40 +242,14 @@ const HomepageLayout = () => (
           </Grid.Row>
       </Grid>
     </Segment>
-
-    <Segment inverted vertical style={{ padding: '5em 0em' }}>
-      <Container>
-        <Grid divided inverted stackable>
-          <Grid.Row>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='About' />
-              <List link inverted>
-                <List.Item as='a'>Sitemap</List.Item>
-                <List.Item as='a'>Contact Us</List.Item>
-                <List.Item as='a'>Religious Ceremonies</List.Item>
-                <List.Item as='a'>Gazebo Plans</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='Services' />
-              <List link inverted>
-                <List.Item as='a'>Banana Pre-Order</List.Item>
-                <List.Item as='a'>DNA FAQ</List.Item>
-                <List.Item as='a'>How To Access</List.Item>
-                <List.Item as='a'>Favorite X-Men</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={7}>
-              <Header as='h4' inverted>
-                Our Mission:
-              </Header>
-              <p>
-              To create a safe place for youth to have fun, be creative, mentored and empowered.               </p>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
-    </Segment>
+    <div class="ui inverted segment">
+  <p></p>
+  <p></p>
+  <h4 class="ui horizontal inverted divider">
+  Our Mission: To create a safe place for youth to have fun, be creative, mentored and empowered.
+  </h4>
+</div>
+<br></br>
   </ResponsiveContainer>
 )
 export default HomepageLayout
