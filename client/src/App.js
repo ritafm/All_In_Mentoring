@@ -196,7 +196,7 @@ const HomepageLayout = () => (
       </Grid>
     </Segment>
 
-    <Segment id="mentor" style={{ padding: '12em' }} style={{ background: '#387d7a' }} vertical>
+    <Segment id="mentor" style={{ padding: '12em', background: '#387d7a' }} vertical>
       <Grid marginleft="5%" columns='equal' stackable>
         <Grid.Row>
           <Grid.Column width={8}>
