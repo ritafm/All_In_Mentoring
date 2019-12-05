@@ -104,6 +104,7 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a'href = '#parentResourcesID'>Parent Resources</Menu.Item>
                 <Menu.Item position='right'>
                 </Menu.Item>
+
               </Container>
             <a class="facebook popup icon item" data-content="visit us on Facebook" href="https://www.facebook.com/alliin.mentoring.7" target="blank">
               <i class="facebook icon"></i>
@@ -152,9 +153,9 @@ class MobileContainer extends Component {
           visible={sidebarOpened}
         >
           <Menu.Item as='a' active>Home</Menu.Item>
-          <Menu.Item href='#calendarID' as='a'>Calendar</Menu.Item>
-          <Menu.Item href='#mentor' as='a' >Mentor Bios</Menu.Item>
-          <Menu.Item href='parentResourcesID' as='a'>Parent Resources</Menu.Item>
+          <Menu.Item href ='#calendarID' as='a'>Calendar</Menu.Item>
+          <Menu.Item href ='#mentor' as='a'>Mentor Bios</Menu.Item>
+          <Menu.Item href ='#parentResourcesID' as='a'>Parent Resources</Menu.Item>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -226,7 +227,7 @@ const HomepageLayout = () => (
       <Grid marginleft="5%" columns='equal' stackable>
       <Grid.Row>
           <Grid.Column width={8}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
+            <Header  as='h3' style={{ fontSize: '2em' }}>
               Parent Resources
             </Header>
             <p style={{ fontSize: '1.33em' }}>
