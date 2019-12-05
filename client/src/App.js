@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import {
-  Button,
   Container,
   Grid,
   Header,
   Menu,
   Responsive,
+  Button,
   Segment,
   Sidebar,
   Visibility,
@@ -14,6 +14,7 @@ import {
 import CardProps from '../src/components/MentorPictureCard/mentorCard'
 import ResourceProps from '../src/components/ParentResources/resources'
 import Footer from '../src/components/Footer/index'
+
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
 // For more advanced usage please check Responsive docs under the "Usage" section.
@@ -28,30 +29,10 @@ const getWidth = () => {
  * such things.
  */
 const HomepageHeading = ({ mobile }) => (
-  <Container text style={{background:'#4c5760' }}>
-    <Header
-      as='h1'
-      content='ALL iiN Mentoring'
-      inverted
-      style={{
-        fontSize: mobile ? '2em' : '4em',
-        fontWeight: 'normal',
-        marginBottom: 0,
-        marginTop: mobile ? '1.5em' : '3em',
-        background: '#4c5760'
-      }}
-    />
-    <Header
-      as='h2'
-      content='All Invested In Neighborhoods.'
-      inverted
-      style={{
-        fontSize: mobile ? '1.5em' : '1.7em',
-        fontWeight: 'normal',
-        marginTop: mobile ? '0.5em' : '1.5em',
-        background: '#4c5760'
-      }}
-    />
+  <Container className image>
+  <img width="100%" style={{opacity: 0.5}} src="https://i.gifer.com/Vp0W.gif" alt="new"/>
+  <p1><span>ALL iiN Mentoring</span></p1>
+  <p2><span>All Invested In Neighborhoods</span></p2>
   </Container>
 )
 
@@ -80,8 +61,9 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
-          <Segment
-            inverted
+
+          <Segment className="jumbotronhead"
+          inverted
             textAlign='center'
             color='#4c5760'
             style={{
@@ -91,7 +73,8 @@ class DesktopContainer extends Component {
             vertical
           >
 
-            <Menu It And 
+            <Menu 
+
               fixed={fixed ? 'top' : null}
               inverted={!fixed}
               pointing={fixed}
@@ -107,19 +90,21 @@ class DesktopContainer extends Component {
                 <Menu.Item href='/' as='a' active>
                   Home
                 </Menu.Item>
-                <Menu.Item href='#calendarID' as='a'>Calendar </Menu.Item>
-                <Menu.Item href='#mentor' as='a'>Mentor Bios</Menu.Item>
-                <Menu.Item href='#parentResourcesID' as='a'>Parent Resources</Menu.Item>
-                <Menu.Item position='right'>
-                </Menu.Item>
-                <a class="facebook popup icon item" data-content="visit us on Facebook" href="https://www.facebook.com/alliin.mentoring.7" target="blank">
-                  <i class="facebook icon"></i>
-                </a>
-                <a class="instagram popup icon item" data-content="visit us on Instagram" href="https://www.instagram.com/alliinmentoring/" target="blank">
-                  <i class="instagram icon"></i>
-                </a>
-              </Container>
 
+                <Menu.Item href = '#calendarID' as='a'>Calendar </Menu.Item>
+                <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
+                <Menu.Item as='a'href = '#parentResourcesID'>Parent Resources</Menu.Item>
+              </Container>
+            <a className="facebook popup icon item" data-content="visit us on Facebook" href="https://www.facebook.com/alliin.mentoring.7" target="blank">
+              <i className="facebook icon"></i>
+            </a>
+            <a className="instagram popup icon item" data-content="visit us on Instagram" href="https://www.instagram.com/alliinmentoring/" target="blank">
+          <i className="instagram icon"></i>
+            </a>    
+            <a className="envelope popup icon item" data-content="email us" href={`mailto:lovell@alliin.org`} target="blank">
+          <i className="envelope icon"></i>
+            </a> 
+      
             </Menu>
             <HomepageHeading />
           </Segment>
@@ -246,8 +231,9 @@ const HomepageLayout = () => (
         <ResourceProps />
       </Grid>
     </Segment>
-
+  
     <Footer />
+
   </ResponsiveContainer>
 )
 export default HomepageLayout
