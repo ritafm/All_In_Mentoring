@@ -3,7 +3,7 @@ import { Card, Icon, Image } from 'semantic-ui-react'
 import MentorCard from '../MentorPictureCard/MentorCard.json'
 
 const CardProps = () => (
-<Card.Group >
+<Card.Group centered={true} >
   <Card>
     <Image
       src={MentorCard[0].image}
