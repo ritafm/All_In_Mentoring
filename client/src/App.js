@@ -101,7 +101,7 @@ class DesktopContainer extends Component {
                 </Menu.Item>
                 <Menu.Item href = '#calendarID' as='a'>Calendar </Menu.Item>
                 <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
-                <Menu.Item as='a'>Parent Resources</Menu.Item>
+                <Menu.Item href = '#parentResourcesID' as='a'>Parent Resources</Menu.Item>
                 <Menu.Item position='right'>
                 </Menu.Item>
 
@@ -154,7 +154,7 @@ class MobileContainer extends Component {
         >
           <Menu.Item as='a' active>Home</Menu.Item>
           <Menu.Item href ='#calendarID' as='a'>Calendar</Menu.Item>
-          <Menu.Item href ='#mentor' as='a' >Mentor Bios</Menu.Item>
+          <Menu.Item href ='#mentor' as='a'>Mentor Bios</Menu.Item>
           <Menu.Item href ='#parentResourcesID' as='a'>Parent Resources</Menu.Item>
         </Sidebar>
 
