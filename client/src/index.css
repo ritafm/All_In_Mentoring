@@ -11,6 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.form{
+  text-align: center;
+
 .image { 
   position: relative; 
   width: 100%; /* for IE 6 */
@@ -35,5 +40,6 @@ p2 span {
 
 .jumbotronhead {
   background: #4C5760 !important;
+
 
 }
