@@ -101,7 +101,7 @@ class DesktopContainer extends Component {
                 </Menu.Item>
                 <Menu.Item href = '#calendarID' as='a'>Calendar </Menu.Item>
                 <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
-                <Menu.Item href = '#parentResourcesID' as='a'>Parent Resources</Menu.Item>
+                <Menu.Item as='a'href = '#parentResourcesID'>Parent Resources</Menu.Item>
                 <Menu.Item position='right'>
                 </Menu.Item>
 
