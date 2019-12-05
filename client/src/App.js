@@ -91,7 +91,7 @@ class DesktopContainer extends Component {
             vertical
           >
 
-            <Menu It And 
+            <Menu
               fixed={fixed ? 'top' : null}
               inverted={!fixed}
               pointing={fixed}
