@@ -13,7 +13,7 @@ import {
 } from 'semantic-ui-react'
 import CardProps from '../src/components/MentorPictureCard/mentorCard'
 import ResourceProps from '../src/components/ParentResources/resources'
-
+import Footer from '../src/components/Footer/index'
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
 // For more advanced usage please check Responsive docs under the "Usage" section.
@@ -28,7 +28,7 @@ const getWidth = () => {
  * such things.
  */
 const HomepageHeading = ({ mobile }) => (
-  <Container text>
+  <Container text style={{background:'#4c5760' }}>
     <Header
       as='h1'
       content='ALL iiN Mentoring'
@@ -38,6 +38,7 @@ const HomepageHeading = ({ mobile }) => (
         fontWeight: 'normal',
         marginBottom: 0,
         marginTop: mobile ? '1.5em' : '3em',
+        background: '#4c5760'
       }}
     />
     <Header
@@ -48,6 +49,7 @@ const HomepageHeading = ({ mobile }) => (
         fontSize: mobile ? '1.5em' : '1.7em',
         fontWeight: 'normal',
         marginTop: mobile ? '0.5em' : '1.5em',
+        background: '#4c5760'
       }}
     />
   </Container>
@@ -78,40 +80,46 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
-          <Segment 
-            inverted 
+          <Segment
+            inverted
             textAlign='center'
-            style={{ 
-              minHeight: 300, 
+            color='#4c5760'
+            style={{
+              minHeight: 300,
               padding: '1em 0em',
             }}
             vertical
           >
 
-            <Menu
+            <Menu It And 
               fixed={fixed ? 'top' : null}
               inverted={!fixed}
-              pointing={!fixed}
-              secondary={!fixed}
+              pointing={fixed}
+              secondary={fixed}
+              style={{
+                padding: '12px',
+                margin: '-12px',
+                background: 'rgba(0,0,0,.3)'
+              }}
               size='massive'
-              >
-              <Container >
-                <Menu.Item href = '/' as='a' active>
+            >
+              <Container id='nav' >
+                <Menu.Item href='/' as='a' active>
                   Home
                 </Menu.Item>
-                <Menu.Item href = '#calendarID' as='a'>Calendar </Menu.Item>
-                <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
-                <Menu.Item href = '#parentResourcesID' as='a'>Parent Resources</Menu.Item>
+                <Menu.Item href='#calendarID' as='a'>Calendar </Menu.Item>
+                <Menu.Item href='#mentor' as='a'>Mentor Bios</Menu.Item>
+                <Menu.Item href='#parentResourcesID' as='a'>Parent Resources</Menu.Item>
                 <Menu.Item position='right'>
                 </Menu.Item>
-
+                <a class="facebook popup icon item" data-content="visit us on Facebook" href="https://www.facebook.com/alliin.mentoring.7" target="blank">
+                  <i class="facebook icon"></i>
+                </a>
+                <a class="instagram popup icon item" data-content="visit us on Instagram" href="https://www.instagram.com/alliinmentoring/" target="blank">
+                  <i class="instagram icon"></i>
+                </a>
               </Container>
-            <a class="facebook popup icon item" data-content="visit us on Facebook" href="https://www.facebook.com/alliin.mentoring.7" target="blank">
-              <i class="facebook icon"></i>
-            </a>
-            <a class="instagram popup icon item" data-content="visit us on Instagram" href="https://www.instagram.com/alliinmentoring/" target="blank">
-          <i class="instagram icon"></i>
-        </a>    
+
             </Menu>
             <HomepageHeading />
           </Segment>
@@ -153,9 +161,9 @@ class MobileContainer extends Component {
           visible={sidebarOpened}
         >
           <Menu.Item as='a' active>Home</Menu.Item>
-          <Menu.Item href ='#calendarID' as='a'>Calendar</Menu.Item>
-          <Menu.Item href ='#mentor' as='a'>Mentor Bios</Menu.Item>
-          <Menu.Item href ='#parentResourcesID' as='a'>Parent Resources</Menu.Item>
+          <Menu.Item href='#calendarID' as='a'>Calendar</Menu.Item>
+          <Menu.Item href='#mentor' as='a'>Mentor Bios</Menu.Item>
+          <Menu.Item href='#parentResourcesID' as='a'>Parent Resources</Menu.Item>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -182,7 +190,7 @@ ResponsiveContainer.propTypes = {
 }
 
 const HomepageLayout = () => (
-  <ResponsiveContainer>
+  <ResponsiveContainer >
     <Segment id="calendarID" style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
@@ -197,37 +205,37 @@ const HomepageLayout = () => (
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign='center'>
-            <Button size='huge' href='https://www.supersaas.com/schedule/All_In_Mentoring/All_In_Mentoring'>View Calendar Here</Button>
+            <Button size='huge' target='_blank' href='https://www.supersaas.com/schedule/All_In_Mentoring/All_In_Mentoring'>View Calendar Here</Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>
     </Segment>
 
-    <Segment id="mentor" style={{ padding: '12em' }} vertical>
+    <Segment id="mentor" style={{ padding: '12em' }} style={{ background: '#387d7a' }} vertical>
       <Grid marginleft="5%" columns='equal' stackable>
-      <Grid.Row>
+        <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
               Mentors
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              These are the mentors that are committed to see youth become leaders who bring change to neighborhoods.    
+              These are the mentors that are committed to see youth become leaders who bring change to neighborhoods.
             </p>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-          <CardProps/>
+            <CardProps />
           </Grid.Column>
-          </Grid.Row>
+        </Grid.Row>
       </Grid>
     </Segment>
 
     <Segment id="parentResourcesID" style={{ padding: '12em' }} vertical>
-      <Grid marginleft="5%" columns='equal' stackable>
-      <Grid.Row>
-          <Grid.Column width={8}>
-            <Header  as='h3' style={{ fontSize: '2em' }}>
+      <Grid columns='equal' stackable textAlign='center'>
+        <Grid.Row >
+          <Grid.Column width={8} >
+            <Header as='h3' style={{ fontSize: '2em' }} >
               Parent Resources
             </Header>
             <p style={{ fontSize: '1.33em' }}>
@@ -235,21 +243,11 @@ const HomepageLayout = () => (
             </p>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row textAlign='center'>
-          <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-          <ResourceProps/>
-          </Grid.Column>
-          </Grid.Row>
+        <ResourceProps />
       </Grid>
     </Segment>
-    <div class="ui inverted segment">
-  <p></p>
-  <p></p>
-  <h4 class="ui horizontal inverted divider">
-  Our Mission: To create a safe place for youth to have fun, be creative, mentored and empowered.
-  </h4>
-</div>
-<br></br>
+
+    <Footer />
   </ResponsiveContainer>
 )
 export default HomepageLayout
