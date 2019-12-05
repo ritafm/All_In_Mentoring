@@ -14,6 +14,7 @@ import {
 import CardProps from '../src/components/MentorPictureCard/mentorCard'
 import ResourceProps from '../src/components/ParentResources/resources'
 
+
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
 // For more advanced usage please check Responsive docs under the "Usage" section.
@@ -88,7 +89,7 @@ class DesktopContainer extends Component {
             vertical
           >
 
-            <Menu
+            <Menu 
               fixed={fixed ? 'top' : null}
               inverted={!fixed}
               pointing={!fixed}
@@ -102,16 +103,16 @@ class DesktopContainer extends Component {
                 <Menu.Item href = '#calendarID' as='a'>Calendar </Menu.Item>
                 <Menu.Item href = '#mentor' as='a'>Mentor Bios</Menu.Item>
                 <Menu.Item as='a'href = '#parentResourcesID'>Parent Resources</Menu.Item>
-                <Menu.Item position='right'>
-                </Menu.Item>
-
               </Container>
-            <a class="facebook popup icon item" data-content="visit us on Facebook" href="https://www.facebook.com/alliin.mentoring.7" target="blank">
-              <i class="facebook icon"></i>
+            <a className="facebook popup icon item" data-content="visit us on Facebook" href="https://www.facebook.com/alliin.mentoring.7" target="blank">
+              <i className="facebook icon"></i>
             </a>
-            <a class="instagram popup icon item" data-content="visit us on Instagram" href="https://www.instagram.com/alliinmentoring/" target="blank">
-          <i class="instagram icon"></i>
-        </a>    
+            <a className="instagram popup icon item" data-content="visit us on Instagram" href="https://www.instagram.com/alliinmentoring/" target="blank">
+          <i className="instagram icon"></i>
+            </a>    
+            <a className="envelope popup icon item" data-content="email us" href={`mailto:lovell@alliin.org`} target="blank">
+          <i className="envelope icon"></i>
+            </a> 
             </Menu>
             <HomepageHeading />
           </Segment>
@@ -242,10 +243,10 @@ const HomepageLayout = () => (
           </Grid.Row>
       </Grid>
     </Segment>
-    <div class="ui inverted segment">
+    <div className="ui inverted segment">
   <p></p>
   <p></p>
-  <h4 class="ui horizontal inverted divider">
+  <h4 className="ui horizontal inverted divider">
   Our Mission: To create a safe place for youth to have fun, be creative, mentored and empowered.
   </h4>
 </div>
