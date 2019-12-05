@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import Image from "../src/bgImage"
 import {
   Container,
   Grid,
@@ -29,29 +28,10 @@ const getWidth = () => {
  * such things.
  */
 const HomepageHeading = ({ mobile }) => (
-  <Container text>
-    <Header
-      as='h1'
-      content='ALL iiN Mentoring'
-      inverted
-      style={{
-        fontSize: mobile ? '2em' : '4em',
-        fontWeight: 'normal',
-        marginBottom: 0,
-        marginTop: mobile ? '1.5em' : '3em',
-        backgroundImage: ''
-      }}
-    />
-    <Header
-      as='h2'
-      content='All Invested In Neighborhoods.'
-      inverted
-      style={{
-        fontSize: mobile ? '1.5em' : '1.7em',
-        fontWeight: 'normal',
-        marginTop: mobile ? '0.5em' : '1.5em',
-      }}
-    />
+  <Container className image>
+  <img width="100%" style={{opacity: 0.5}} src="https://i.gifer.com/Vp0W.gif" alt="new"/>
+  <p1><span>ALL iiN Mentoring</span></p1>
+  <p2><span>All Invested In Neighborhoods</span></p2>
   </Container>
 )
 
@@ -80,8 +60,8 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
-          <Segment 
-            inverted 
+          <Segment className="jumbotronhead"
+          inverted
             textAlign='center'
             style={{ 
               minHeight: 300, 
