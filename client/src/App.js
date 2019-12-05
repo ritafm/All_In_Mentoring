@@ -179,11 +179,11 @@ const HomepageLayout = () => (
     <Segment id="calendarID" style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
-          <Grid.Column width={8}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
+          <Grid.Column width={16}>
+            <Header as='h3' style={{ textAlign: 'center',fontSize: '2em' }}>
               All iiN Calendar
             </Header>
-            <p style={{ fontSize: '1.33em' }}>
+            <p style={{ textAlign: 'center', fontSize: '1.33em' }}>
               Volunteers please log in and click on events to claim.
             </p>
           </Grid.Column>
@@ -199,18 +199,18 @@ const HomepageLayout = () => (
     <Segment id="mentor" style={{ padding: '12em', background: '#387d7a' }} vertical>
       <Grid marginleft="5%" columns='equal' stackable>
         <Grid.Row>
-          <Grid.Column width={8}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
+          <Grid.Column width={16}>
+            <Header as='h3' style={{ textAlign: 'center',ontSize: '2em' }}>
               Mentors
             </Header>
-            <p style={{ fontSize: '1.33em' }}>
+            <p style={{ textAlign: 'center', fontSize: '1.33em' }}>
               These are the mentors that are committed to see youth become leaders who bring change to neighborhoods.
             </p>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-            <CardProps />
+            <CardProps style={{textAlign: 'center'}}/>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -219,7 +219,7 @@ const HomepageLayout = () => (
     <Segment id="parentResourcesID" style={{ padding: '12em' }} vertical>
       <Grid columns='equal' stackable textAlign='center'>
         <Grid.Row >
-          <Grid.Column width={8} >
+          <Grid.Column width={16} >
             <Header as='h3' style={{ fontSize: '2em' }} >
               Parent Resources
             </Header>
@@ -228,7 +228,7 @@ const HomepageLayout = () => (
             </p>
           </Grid.Column>
         </Grid.Row>
-        <ResourceProps />
+        <ResourceProps/>
       </Grid>
     </Segment>
   
