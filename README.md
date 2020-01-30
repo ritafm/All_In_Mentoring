@@ -1,7 +1,7 @@
-# All_In_Mentoring 
+# All_iin_Mentoring 
 
 Overall Concept
-All iiNMentoring is a not-for-profit group in South Seattle dedicated to empowering youth and improving neighborhoods.  The group is run entirely by volunteers.  They need a website to accomplish the following things:  
+All iin Mentoring is a not-for-profit group in South Seattle dedicated to empowering youth and improving neighborhoods.  The group is run entirely by volunteers.  They need a website to accomplish the following things:  
 •Coordinate volunteers to provide a hot meal to the 30 kids once per week  
 •Connect parents and kids to mentors   
 •Provide parents with important documents   
